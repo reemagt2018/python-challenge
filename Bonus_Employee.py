@@ -70,7 +70,7 @@ for ssn in ssn:
 #    print (ssn[0])
 #    print (news)
     newssn.append(news)
-print (newssn)
+#print (newssn)
 
 
 us_state_abbrev = {
@@ -131,7 +131,7 @@ for state in state:
     print (f'{us_state_abbrev[state]}')
     stateabbr.append(us_state_abbrev[state])
 
-print(stateabbr)
+#print(stateabbr)
 
 
 

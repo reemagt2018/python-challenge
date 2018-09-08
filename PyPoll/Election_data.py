@@ -45,7 +45,7 @@ for i in range(len(mynewlist)):
 print (Votes)
 print (mynewlist)
 print (Total_votes)
-percent = round(int(row[6]) / int(row[5]), 2)
+#percent = round(int(row[6]) / int(row[5]))
 Percentage_vote = [x / Total_votes * 100 for x in Votes]
 Percentage_vote = [round(x) for x in Percentage_vote]
 #Percentage_vote = (Votes/Total_votes)
