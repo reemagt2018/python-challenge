@@ -61,19 +61,14 @@ print (f'{Line3}')
 print (f'{Line4}')
 print (f'{Line5}')
 
+file1 = open(r"C:\Users\reema\Desktop\PythonStuff\python-challenge\PyBank\Budget_output_final.csv","w")
 
-# Set variable for output file
-output_file = (r"C:\Users\reema\Desktop\PythonStuff\python-challenge\PyBank\Budget_final.csv")
-#
-# file1 = open(r"C:\Users\reema\Desktop\PythonStuff\python-challenge\PyBank\Budget_final.csv","w")
-# L = ["Header1 \n"]
-# file1.close()
+file1.write(f'{Header1}\n')
+file1.write(f'{Line0}\n')
+file1.write(f'{Line1}\n')
+file1.write(f'{Line2}\n')
+file1.write(f'{Line3}\n')
+file1.write(f'{Line4}\n')
+file1.write(f'{Line5}\n')
 
-
-
-#  Open the output file
-with open(output_file, "w") as datafile:
-    writer = csv.writer(datafile)
-
-    # Write in zipped rows
-    writer.writerows(Header1)
+file1.close()
