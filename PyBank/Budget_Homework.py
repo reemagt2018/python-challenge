@@ -46,12 +46,12 @@ Average=total_change/(len(DatesConsidered)-1)
 
 
 Header1="Financial Analysis"
-Line0="'----------------------------'"
+Line0="----------------------------"
 Line1= f'Total Months : {len(DatesConsidered)}'
 Line2= f'Total : {total}'
 Line3= f'Average  Change : $ {Average} '
-Line4=f'Greatest Increase in Profits : {Date_positive_change}   $ {max(Change_data)}'
-Line5=f'Greatest Decrease in Profits : {Date_negative_change}  $ {min(Change_data)}'
+Line4=f'Greatest Increase in Profits : {Date_positive_change}  ( $ {max(Change_data)})'
+Line5=f'Greatest Decrease in Profits : {Date_negative_change}  ($ {min(Change_data)})'
 
 print (f'{Header1}')
 print (f'{Line0}')
