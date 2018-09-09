@@ -13,12 +13,21 @@ def splitParagraphIntoSentences(paragraph):
     return sentenceList
 
 #paragraph=input("Enter Paragraph")
-paragraph="Life is one huge emotional mind game. There are days we wake up with an empty heart wondering if we’re even going to make it. We get beaten to the ground over and over again, we get our hope torn from us, we scream at the top of our lungs to the sky hoping that the moon will fill the void that still remains.. But somehow through all the pain, through all the suffering.. These moments never compare to the seconds that take our breath away. The situations given to us that remind us of how beautiful life can be. Let go.. Detach yourself.. There’s too much beauty to quit. I live for moments like these… WE live for moments like these."
+# paragraph="Life is one huge emotional mind game. There are days we wake up with an empty heart wondering if we’re even going to make it. We get beaten to the ground over and over again, we get our hope torn from us, we scream at the top of our lungs to the sky hoping that the moon will fill the void that still remains.. But somehow through all the pain, through all the suffering.. These moments never compare to the seconds that take our breath away. The situations given to us that remind us of how beautiful life can be. Let go.. Detach yourself.. There’s too much beauty to quit. I live for moments like these… WE live for moments like these."
+
+fh=open('Parag_Input.txt')
+# print (fh.readlines())
+
+paragraphin= fh.readlines()
+#print (paragraphin)
+
+paragraph = ''.join(paragraphin)
+
 
 sentences = splitParagraphIntoSentences(paragraph)
 #print (sentences)
 numberofsentences=len(list(sentences))
-print (numberofsentences)
+#print (numberofsentences)
 char=0
 word=1
 for s in sentences:
