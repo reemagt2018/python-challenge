@@ -64,9 +64,9 @@ for name in name:
     lastname.append(names[1])
 
 for ssn in ssn:
-    print(ssn)
+    # print(ssn)
     ssn = ssn.split("-")
-    news='XXX-XX-'+(ssn[2])
+    news='***-**-'+(ssn[2])
 #    print (ssn[0])
 #    print (news)
     newssn.append(news)
@@ -127,31 +127,25 @@ us_state_abbrev = {
 }
 
 for state in state:
-    print (state)
-    print (f'{us_state_abbrev[state]}')
+    # print (state)
+    # print (f'{us_state_abbrev[state]}')
     stateabbr.append(us_state_abbrev[state])
 
 #print(stateabbr)
 
 
+# Zip lists together
+cleaned_csv = zip(empid, firstname, lastname, newDOB, newssn, stateabbr)
 
+# Set variable for output file
+output_file = ("bonus_employee_final.csv")
 
+#  Open the output file
+with open(output_file, "w", newline="") as datafile:
+    writer = csv.writer(datafile)
 
+    # Write the header row
+    writer.writerow(["Emp ID","First Name","Last Name","DOB","SSN","State"])
 
-#
-# # Zip lists together
-# cleaned_csv = zip(title, price, subscribers, reviews, review_percent, length)
-#
-# # Set variable for output file
-# output_file = os.s.join("web_final.csv")
-#
-# #  Open the output file
-# with open(output_file, "w", newline="") as datafile:
-#     writer = csv.writer(datafile)
-#
-#     # Write the header row
-#     writer.writerow(["Title", "Course Price", "Subscribers", "Reviews Left",
-#                      "Percent of Reviews", "Length of Course"])
-#
-#     # Write in zipped rows
-#     writer.writerows(cleaned_csv)
+    # Write in zipped rows
+    writer.writerows(cleaned_csv)
