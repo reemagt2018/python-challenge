@@ -1,4 +1,5 @@
 import csv
+import math
 with open(r"C:\Users\reema\Desktop\PythonStuff\election_data_0907.csv",encoding='utf-8') as csvfile:
   reader = csv.DictReader(csvfile)
   Candidates_considered = []
@@ -10,6 +11,7 @@ with open(r"C:\Users\reema\Desktop\PythonStuff\election_data_0907.csv",encoding=
   mynewlistsort=[]
   Percentage_votesort=[]
   Votesort=[]
+  Percentage_vote1=[]
   for row in reader:
 
       Candidates_considered.append(row['Voter ID'])
@@ -37,14 +39,15 @@ for i in range(len(mynewlist)):
 # print (Total_votes)
 
 Percentage_vote = [x / Total_votes * 100 for x in Votes]
-Percentage_vote = [round(x) for x in Percentage_vote]
+Percentage_vote = [round(x,3) for x in Percentage_vote]
 #Percentage_vote = (Votes/Total_votes)
 # print (Percentage_vote)
 winner_index=Votes.index(max(Votes))
 winner=mynewlist[winner_index]
 # print (winner)
 
-
+Percentage_vote1=[Percentage_vote]*1000
+#print (Percentage_vote1)
 #### Create sorted Lists
 # mynewlistsort=mynewlist.sort(reverse=False )
 # Percentage_votesort=Percentage_vote.sort(reverse=False )
